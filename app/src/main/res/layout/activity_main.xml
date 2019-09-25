@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/homeRellayout0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+         <!--top toalbar-->
+        <RelativeLayout
+            android:id="@+id/homeRellayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/layout_top_tabs"/>
+
+
+        </RelativeLayout>
+
+        <!--middle section-->
+        <RelativeLayout
+            android:id="@+id/homeRellayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/homeRellayout1"
+            android:layout_above="@+id/homeRellayout3">
+
+            <include layout="@layout/layout_center_viewpager"/>
+
+        </RelativeLayout>
+
+        <!--bottom navigation-->
+        <RelativeLayout
+            android:id="@+id/homeRellayout3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <include layout="@layout/layout_bottom_navigation_view"/>
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
